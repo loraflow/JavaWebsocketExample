@@ -16,7 +16,7 @@ public class WebsocketExample
     public static void main(String[] args)
     {
         //url 中加入feedback=true 可以收到消息回应
-        String destUri = "wss://loraflow.io/v1/application/ws?appeui=1234657812345633&token=1v7pw4e565772e63066a09c23ab2c&feedback=true";
+        String destUri = "wss://loraflow.io/v1/application/ws?appeui=1234657812345633&token=1v7pw4e565772e63066a09c23ab2c";
         if (args.length > 0)
         {
             destUri = args[0];
