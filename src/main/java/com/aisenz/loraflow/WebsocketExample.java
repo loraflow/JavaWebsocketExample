@@ -41,9 +41,11 @@ public class WebsocketExample
                 {
                     continue;
                 }
-                //下行
+                //下行示例
                 Gson gson = new Gson();
-                String content = gson.toJson(new Message("4786e6ed002a0036", 12, "11111"));
+                //data 的数据长度必须是偶数的HEX编码，例如可以是"1234",不能是"123"
+                //fport 在1-223之间
+                String content = gson.toJson(new Message("4786e6ed002a0036", 12, "1111"));
                 System.out.println(content);
                 socket.getSession().getRemote().sendString(content+'\n');
                 Thread.sleep(1000*10);
